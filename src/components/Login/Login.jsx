@@ -55,13 +55,13 @@ const Login = ({socialTitle}) => {
       </Helmet>
       <div className="hero min-h-screen">
         <div className="w-full max-w-7xl mx-auto">
+          <div className="card shadow-2xl w-full max-w-md bg-base-100 mx-auto my-10">
           <div className="text-center">
             <h1 className="text-5xl font-bold">Login</h1>
           </div>
-          <div className="card shadow-2xl w-full max-w-md bg-base-100 mx-auto my-10">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="card-body w-full"
+              className="card-body py-3 w-full"
             >
               <div className="flex gap-6 w-full">
                 <div className="form-control w-full">
@@ -127,7 +127,7 @@ const Login = ({socialTitle}) => {
                   type="checkbox"
                   checked={showPass ? "checked" : ""}
                   readOnly
-                  className="checkbox checkbox-sm"
+                  className="checkbox checkbox-sm checkbox-info"
                 />
                 <span className="label-text text-sm">Show Password</span>
               </div>
@@ -136,16 +136,16 @@ const Login = ({socialTitle}) => {
                   Forgot password?
                 </a>
               </label>
-              <div className="form-control mt-6">
+              <div className="form-control">
                 <input
                   type="submit"
                   value="Login"
-                  className="btn bg-black hover:bg-black text-white px-6 rounded-none border-none"
+                  className="btn bg-[#00B5FF] hover:bg-[#00B5FF] text-white px-6 rounded-none border-none"
                 />
               </div>
             </form>
             <p className="text-center">
-              <small>
+              <small className="uppercase">
                 Do not have an Register? {" "}
                 <Link to="/register" className="underline text-blue-700">
                   Register

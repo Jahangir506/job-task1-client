@@ -59,13 +59,13 @@ const Register = ({socialTitle}) => {
       </Helmet>
       <div className="hero min-h-screen">
         <div className="w-full max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold">Registration with Save Life!</h1>
-          </div>
           <div className="card shadow-2xl w-full max-w-lg bg-base-100 mx-auto my-10">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold">Registration</h1>
+          </div>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="card-body w-full"
+              className="card-body py-3 w-full"
             >
                 <div className="form-control">
                   <label className="label">
@@ -211,23 +211,23 @@ const Register = ({socialTitle}) => {
                   type="checkbox"
                   checked={showPass ? "checked" : ""}
                   readOnly
-                  className="checkbox checkbox-sm checkbox-error"
+                  className="checkbox checkbox-sm checkbox-info"
                 />
                 <span className="label-text">Show Password</span>
               </div>
-              <div className="form-control mt-6">
+              <div className="form-control">
                 <p className="text-red-600 mb-3 bg-red-50 text-center">
                   {errors.confirm_pass?.message}
                 </p>
                 <input
                   type="submit"
                   value="Register"
-                  className="btn bg-black hover:bg-black text-white px-6 rounded-none border-none"
+                  className="btn bg-[#00B5FF] hover:bg-[#00B5FF] text-white px-6 rounded-none border-none"
                 />
               </div>
             </form>
             <p className="text-center">
-              <small>
+              <small className="uppercase">
                 Already have an Register?
                 <Link to="/login" className="underline text-blue-700">
                   {" "}

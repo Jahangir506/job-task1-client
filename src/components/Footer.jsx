@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <>
-       <footer className="p-10 bg-blue-600 text-white">
+       <footer className="p-10 bg-[#00B5FF] text-white">
         <div className="footer grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-7xl mx-auto justify-items-center opacity-95">
           <nav>
             <header className="footer-title">Services</header>
@@ -60,7 +60,7 @@ const Footer = () => {
           </nav>
         </div>
       </footer>
-      <footer className="px-10 py-4 border-t bg-blue-600 text-white border-base-300">
+      <footer className="px-10 py-4 border-t bg-[#00B5FF] text-white border-base-300">
         <div className="footer footer-center  max-w-5xl mx-auto">
           <aside>
             <p>

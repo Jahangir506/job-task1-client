@@ -27,8 +27,8 @@ const SocialLogin = ({socialTitle}) => {
 
   return (
     <>
-      <div className="card-body pt-3 mx-auto">
-        <button onClick={handleGoogle} className="btn w-96  rounded-full" >
+      <div className="card-body pt-0.5 pb-6 mx-auto">
+        <button onClick={handleGoogle} className="btn w-96 uppercase rounded-full" >
           {socialTitle}
           <FcGoogle className="text-xl"/>
         </button>
