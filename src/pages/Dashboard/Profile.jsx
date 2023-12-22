@@ -1,18 +1,16 @@
-import { Helmet } from "react-helmet";
-import profileBanner from "../../assets/profile_banner.jpg";
+import { Helmet } from "react-helmet-async";
 import useAuth from "../../hooks/useAuth";
 
 const Profile = () => {
   const { user } = useAuth();
   return (
-    <div className="flex justify-center items-center h-screen bg-orange-200 flex-1">
+    <div className="flex justify-center items-center h-screen bg-blue-200 flex-1">
       <Helmet>
         <title>Profile | Dashboard</title>
       </Helmet>
       <div className="bg-white shadow-lg rounded-2xl md:w-3/5 w-3/4">
         <img
           alt="profile"
-          src={profileBanner}
           className="w-full mb-4 rounded-t-lg h-36"
         />
         <div className="flex flex-col items-center justify-center p-4 -mt-16">
@@ -31,22 +29,22 @@ const Profile = () => {
             <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 ">
               <p className="flex flex-col">
                 Name
-                <span className="font-bold text-orange-500 ">
+                <span className="font-bold text-[#00B5FF] ">
                   {user?.displayName}
                 </span>
               </p>
               <p className="flex flex-col">
                 Email
-                <span className="font-bold text-orange-500 ">
+                <span className="font-bold text-[#00B5FF] ">
                   {user?.email}
                 </span>
               </p>
 
               <div>
-                <button className="bg-orange-500 px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-orange-200 hover:text-orange-500 block mb-1">
+                <button className="bg-[#00B5FF] px-10 py-1 rounded-lg text-white cursor-pointer hover:bg-blue-200 hover:text-[#00B5FF] block mb-1">
                   Update Profile
                 </button>
-                <button className="bg-orange-500 px-7 py-1 rounded-lg text-white cursor-pointer hover:bg-orange-200 hover:text-orange-500">
+                <button className="bg-[#00B5FF] px-7 py-1 rounded-lg text-white cursor-pointer hover:bg-blue-200 hover:text-[#00B5FF]">
                   Change Password
                 </button>
               </div>

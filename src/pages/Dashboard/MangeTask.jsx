@@ -75,12 +75,12 @@ const MangeTask = () => {
       <Helmet>
         <title>Dashboard | Taskify</title>
       </Helmet>
-      <div className="flex justify-center py-5 text-xl">
+      <div className="flex justify-center lg:justify-end items-center py-5 text-xl">
         <button
-          className="px-3 py-2 bg-orange-400 rounded-md hover:bg-orange-100 hover:text-orange-500"
+          className="px-3 py-2 bg-[#00B5FF] rounded-md hover:bg-blue-50 hover:text-[#00B5FF]"
           onClick={() => openModal()}
         >
-          Create Task
+          + Create Task
         </button>
       </div>
       <DragDropContext onDragEnd={onDragEnd}>

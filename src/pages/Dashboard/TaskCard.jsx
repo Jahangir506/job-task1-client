@@ -46,8 +46,8 @@ const TaskCard = ({ item, refetch, provided }) => {
       <div className="flex justify-between pt-2">
         <span
           className={`px-1 rounded-md text-white ${
-            item.priority === "low" && "bg-green-500"
-          } ${item.priority === "moderate" && "bg-blue-500"} ${
+            item.priority === "low" && "bg-yellow-600"
+          } ${item.priority === "moderate" && "bg-[#00B5FF]"} ${
             item.priority === "high" && "bg-red-500"
           }`}
         >
@@ -68,7 +68,7 @@ const TaskCard = ({ item, refetch, provided }) => {
         </button>
         <select
           onChange={handleStatus}
-          className="rounded-lg outline-orange-500"
+          className="rounded-lg outline-[#00B5FF]"
           name="status"
           id=""
           defaultValue={item.status}

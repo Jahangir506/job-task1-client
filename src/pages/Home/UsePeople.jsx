@@ -1,7 +1,7 @@
 const UsePeople = () => {
   return (
     <>
-      <div className="grid grid-cols-3 mx-auto justify-items-center my-14">
+      <div className="grid grid-cols-1 gap-y-6 md:grid-cols-2 lg:grid-cols-3 mx-auto justify-items-center my-14">
         <div
           className="card w-96 shadow-xl rounded-none"
           style={{
