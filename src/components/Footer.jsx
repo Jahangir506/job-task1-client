@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="grid grid-flow-col gap-4">
               <a>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://twitter.com/Jahangir506"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -36,7 +36,7 @@ const Footer = () => {
               </a>
               <a>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://www.youtube.com/@ProgrammingHeroCommunity"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const Footer = () => {
               </a>
               <a>
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns="https://www.facebook.com/MD.Jahangir.Alam.JK/"
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"

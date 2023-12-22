@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Banner = () => {
@@ -19,7 +20,9 @@ const Banner = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-                <button className="btn btn-primary">{`let's Explore`}</button>
+            <Link to='/dashboard'>
+              <button className="btn btn-primary">{`let's Explore`}</button>
+            </Link>
           </div>
         </div>
       </div>
