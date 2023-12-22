@@ -8,7 +8,7 @@ const Profile = () => {
       <Helmet>
         <title>Profile | Dashboard</title>
       </Helmet>
-      <div className="bg-white shadow-lg rounded-2xl md:w-3/5 w-3/4">
+      <div className="bg-white shadow-lg rounded-2xl md:w-3/5 w-3/1">
         <img
           alt="profile"
           className="w-full mb-4 rounded-t-lg h-36"
@@ -26,14 +26,14 @@ const Profile = () => {
             User Id: {user?.uid}
           </p>
           <div className="w-full p-2 mt-4 rounded-lg">
-            <div className="flex flex-wrap items-center justify-between text-sm text-gray-600 ">
-              <p className="flex flex-col">
+            <div className="flex flex-col space-y-6 flex-wrap items-center justify-between text-sm text-gray-600 ">
+              <p className="flex ">
                 Name
                 <span className="font-bold text-[#00B5FF] ">
                   {user?.displayName}
                 </span>
               </p>
-              <p className="flex flex-col">
+              <p className="flex ">
                 Email
                 <span className="font-bold text-[#00B5FF] ">
                   {user?.email}

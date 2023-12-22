@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/">Mange Task</Link>
+        <Link to="/dashboard/manageTask">Mange Task</Link>
       </li>
       <li>
         <Link to="/">Create Task</Link>
