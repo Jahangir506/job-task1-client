@@ -1,95 +1,74 @@
 import { Helmet } from "react-helmet-async";
-import { BiDonateBlood } from "react-icons/bi";
-import { FaHome, FaUser } from "react-icons/fa";
-import { MdOutlineBloodtype } from "react-icons/md";
+import { FaCheckCircle, FaHome, FaList, FaUser } from "react-icons/fa";
+import { GrLogout } from "react-icons/gr";
+import { IoMdRefresh } from "react-icons/io";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../hooks/useAdmin";
-import useVolunteer from "../hooks/useVolunteer";
+import useAuth from "../hooks/useAuth";
 
 const Dashboard = () => {
   const [isAdmin] = useAdmin();
-  const [isVolunteer] = useVolunteer();
+
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => console.log(err));
+  };
 
   return (
     <>
       <Helmet>
-        <title>Save-Life | dashboard-home</title>
+        <title>QuickTask | dashboard</title>
       </Helmet>
       <div className="flex">
-        <div className="w-72 min-h-screen bg-blue-600 text-white">
+        <div className="w-72 min-h-screen bg-gradient-to-r from-[#009dff] from-10% to-[#BFDBFE] to-110%  text-white">
           <ul className="menu">
-            {isAdmin ? (
-              <>
-                <li>
-                  <NavLink to="/dashboard/admin-home">
-                    <FaUser />
-                    Admin Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/all-users">
-                    <BiDonateBlood /> All Users
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/admin-all-blood-donation-request">
-                    <MdOutlineBloodtype /> All Blood Donation Request
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/admin-content-management">
-                    <MdOutlineBloodtype /> Content Management
-                  </NavLink>
-                </li>
-              </>
-            ) : isVolunteer ? (
-              <>
-                <li>
-                  <NavLink to="/dashboard/volunteer-home">
-                    <FaUser />
-                   Volunteer Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/all-blood-donation-request">
-                    <BiDonateBlood /> All Blood Donation Request
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/content-management">
-                    <MdOutlineBloodtype /> Content Management
-                  </NavLink>
-                </li>
-              </>
-            ) : (
-              <>
-                <li>
-                  <NavLink to="/dashboard/users-home">
-                    <FaUser />
-                    User Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/my-donation-requests">
-                    <BiDonateBlood /> My Donation Requests
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/dashboard/create-donation-request">
-                    <MdOutlineBloodtype /> Create Donation Request
-                  </NavLink>
-                </li>
-              </>
-            )}
+            <li>
+              <NavLink to="/dashboard/Profile">
+                <FaUser />
+                Profile
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard/manageTask">
+                <FaUser />
+                Mange Task
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard/todoList">
+                <FaList /> Todo List
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard/ongoing">
+                <IoMdRefresh className="text-lg" /> Ongoing
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard/completed">
+                <FaCheckCircle /> Completed
+              </NavLink>
+            </li>
+
             <div className="divider"></div>
             <li>
               <NavLink to="/">
                 <FaHome /> Home
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/" onClick={handleLogOut}>
+                <GrLogout /> Log Out
+              </NavLink>
+            </li>
           </ul>
         </div>
-        <div className="flex-1 px-12 bg-blue-100">
+        <div className="flex-1 px-12 bg-blue-200">
+          <div className="flex justify-end">
+            <h2 className="py-1 px-6 w-28 my-4 bg-[#009dff]">+ Create Task</h2>
+          </div>
           <Outlet></Outlet>
         </div>
       </div>
