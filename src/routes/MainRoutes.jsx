@@ -6,6 +6,7 @@ import MainLayouts from "../layouts/MainLayouts";
 import MangeTask from "../pages/Dashboard/MangeTask";
 import Home from "../pages/Home/Home";
 import Profile from "../pages/Dashboard/Profile";
+import DashboardHome from "../pages/Dashboard/DashboardHome";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: '/dashboard',
         element: <Dashboard/>,
         children: [
+            {
+                path: '/dashboard',
+                element: <DashboardHome/>
+            },
             {
                 path: '/dashboard/manageTask',
                 element: <MangeTask/>
